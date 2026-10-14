@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sasta Kaun? — which pack is really cheaper</title>
+<meta name="description" content="Compare packs by real price per kg, litre or piece — with buy-1-get-1, % off and ₹ off offers. See how much you save a month. Free, offline.">
+<meta name="theme-color" content="#0E7A3E">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top wrap">
+  <h1>Sasta Kaun?</h1>
+  <p>Which pack is really cheaper? Compare by price per kg, litre or piece — offers included.</p>
+</header>
+
+<main class="wrap">
+  <label class="what">Buying<input id="what" type="text" placeholder="Atta, detergent, oil, shampoo…" autocomplete="off"></label>
+
+  <section id="opts" class="opts" aria-label="Packs to compare"></section>
+  <button type="button" class="add" id="add">+ Add another pack</button>
+
+  <section id="result" class="result" aria-live="polite"></section>
+
+  <section class="usage">
+    <label>I use about
+      <input id="use-n" type="number" inputmode="decimal" min="0" step="any" placeholder="2">
+      <select id="use-u" aria-label="Usage unit"></select>
+      a month
+    </label>
+    <p id="use-out" class="use-out"></p>
+  </section>
+
+  <div class="row">
+    <button type="button" class="btn primary" id="share">Share on WhatsApp</button>
+    <button type="button" class="btn" id="save">Save this comparison</button>
+    <button type="button" class="btn ghost" id="reset">Start over</button>
+  </div>
+
+  <section id="hist-wrap" class="hist" hidden>
+    <h2>Saved comparisons</h2>
+    <ul id="hist"></ul>
+  </section>
+
+  <section class="examples">
+    <h2>Try a real example</h2>
+    <div class="ex">
+      <button type="button" data-ex="atta">Atta 5 kg vs 10 kg</button>
+      <button type="button" data-ex="oil">Oil 1 L vs 5 L tin</button>
+      <button type="button" data-ex="soap">Soap 3+1 offer vs single</button>
+      <button type="button" data-ex="shampoo">Shampoo sachets vs bottle</button>
+    </div>
+  </section>
+</main>
+
+<footer class="foot wrap">
+  <p>Free and open source. Works offline. <a href="https://github.com/jainronakwork-jr/sasta-kaun" rel="noopener" target="_blank">Source on GitHub</a></p>
+</footer>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="app.js"></script>
+</body>
+</html>
